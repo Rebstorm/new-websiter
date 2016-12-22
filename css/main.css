@@ -1,0 +1,247 @@
+a#icon-attr{
+    color:#ced1ce;
+}
+div#contact{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    margin: 1% 10%;
+    width:80%;
+    height:80%;
+    border-radius: 0em;
+    background: white;
+    z-index: 100;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+div#contact:hover{
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+div#content{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    margin: 1% 10%;
+    width:80%;
+    height:80%;
+    border-radius: 0em;
+    background: white;
+    z-index: 100;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+div#content:hover{
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+div#iconcopy{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    margin: 1% 10%;
+    width:80%;
+    height:80%;
+    border-radius: 0em;
+    background: white;
+    z-index: 100;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+div#iconcopy:hover{
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+div#content-title{
+    padding-left: 1em;
+}
+
+div#content-p{
+    margin-left: 2em;
+}
+
+div#close-content{
+    position: absolute;
+    bottom: 0;
+    height: 10% !important;
+    width: 100%;
+    background: #ced1ce;
+    cursor: pointer;
+    text-align: center;
+}
+
+div#close-icon{
+    position: absolute;
+    bottom: 0;
+    height: 10% !important;
+    width: 100%;
+    background: #ced1ce;
+    cursor: pointer;
+    text-align: center;
+}
+
+div#close-contact{
+    position: absolute;
+    bottom: 0;
+    height: 10% !important;
+    width: 100%;
+    background: #ced1ce;
+    cursor: pointer;
+    text-align: center;
+}
+
+
+
+div#idbox{
+    position: relative;
+    width: 100%;
+    min-height: 6em;
+    text-align: center;
+    margin-top: 10em;
+    z-index: 5;
+} 
+
+div#idbox-shadow{
+    width: 100%;
+    min-height:2em;
+    text-align: center;
+
+}
+
+div.floaty-shadowy{
+    position: relative;
+    display: inline-block;
+    background-image: url("../resources/drop-shadow_shadowier.png");
+    width: 6.2em;
+    height: 25px;
+    background-size: 100%;
+    margin-right: 2em;
+}
+
+div.floaty-boxy{
+    position: relative;
+    display: inline-block;  
+    width: 4em;
+    height: 4em;
+    padding: 1em;
+    cursor: pointer;
+    margin-right: 2em;
+    border-radius: 2em;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+footer#footsy-footser{
+    position: absolute;
+    width: 99%;
+    bottom: 0;
+    text-align: center;
+}
+
+img.done-button{
+    position: relative;
+    margin: 0px auto;
+    display: inline-block;
+    width: 3em;
+    margin-top: 0.2em;
+}
+
+p.p-centered{
+    text-align: center;
+    width: auto;
+    display: inline-block;
+}
+
+p.p-bread{
+    font: 2em;
+}
+
+
+.floatr {
+    animation: floaty-float 2s linear infinite;
+}
+
+.floatr-bigsmall {
+    animation: float-bigsmallr 2s linear infinite;
+}
+
+.come-in-once {
+    animation: come-in 0.5s linear;
+}
+
+/* ANIMAGICS!! */
+
+@keyframes floaty-float{
+    0% {
+        bottom: 0;
+    }
+
+    10% {
+        bottom: 0.1em;
+    }
+
+    25% {
+        bottom: 0.3em;
+    }
+
+    50% {
+        bottom: 0.5em;
+        
+    }
+
+    75% {
+        bottom: 0.3em;
+    }
+
+    100% {
+        bottom: 0;
+    }
+}
+
+@keyframes float-bigsmallr{
+
+    0% {
+        opacity: 1;
+    }
+
+    10% {
+        opacity: 0.9;
+        
+    }
+
+    25% {
+        opacity: 0.7;
+    }
+
+    50% {
+        opacity: 0;
+        
+    }
+
+    75% {
+        opacity: 0.7;
+    }
+
+    100% {
+        opacity: 1;
+    }
+
+}
+
+@keyframes come-in {
+    0% {
+        opacity: 0;
+        top: 4em;
+    }
+
+    100% {
+        opacity: 1;
+        top: 0;
+    }
+}
