@@ -9,7 +9,7 @@ a#icon-attr{
     color:#ced1ce;
 }
 div#contact{
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     display: none;
@@ -41,6 +41,16 @@ div#content{
 
 }
 
+div.content-container {
+  text-align: center;
+}
+
+div.content-page{
+  width: 80%;
+  text-align: start;
+  margin: 0 auto;
+}
+
 div#content:hover{
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
@@ -68,8 +78,6 @@ div#content-title{
 }
 
 div#content-p{
-    margin-left: 2em;
-    margin-right: 2em;
 }
 
 div#close-content{
@@ -130,6 +138,10 @@ div.floaty-shadowy{
     background-size: 100%;
 }
 
+div.floaty-shadowy:last-child{
+    height: 2.1em;
+}
+
 div.box-container{
   margin: 1em 1em 0 1em;
   display: inline-block;
@@ -169,8 +181,8 @@ div.floaty-boxy_backup{
 }
 
 footer#footsy-footser{
-    position: absolute;
-    width: 99%;
+    position: fixed;
+    width: 100%;
     bottom: 0;
     text-align: center;
 }
@@ -318,4 +330,12 @@ p.p-bread{
         opacity: 0;
         top: 0;
     }
+}
+
+
+/* If on a small mobile device */
+@media (max-width: 728px) {
+   div#idbox{
+     margin-top: 0;
+   }
 }
