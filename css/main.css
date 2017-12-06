@@ -1,7 +1,8 @@
 body {
     font-family: 'PT Serif', serif;
-    overflow-y: hidden;
     background-image: radial-gradient(27% 185%, #E1E6EC 0%, #F0F4F7 100%);
+    margin: 0;
+    padding: 0;
 }
 
 a#icon-attr{
@@ -49,9 +50,8 @@ div#iconcopy{
     top: 0;
     left: 0;
     display: none;
-    margin: 1% 10%;
-    width:80%;
-    height:80%;
+    width:100%;
+    min-height:100%;
     border-radius: 0em;
     background: white;
     z-index: 100;
@@ -75,10 +75,10 @@ div#content-p{
 div#close-content{
     position: absolute;
     bottom: 0;
-    min-height: 3em;
+    min-height: 5em;
     height: 5% !important;
     width: 100%;
-    background: #e9e8e7;
+    background-image: radial-gradient(27% 185%, #E1E6EC 0%, #F0F4F7 100%);
     cursor: pointer;
     text-align: center;
 }
@@ -88,7 +88,7 @@ div#close-icon{
     bottom: 0;
     height: 10% !important;
     width: 100%;
-    background: #ced1ce;
+    background-image: radial-gradient(27% 185%, #E1E6EC 0%, #F0F4F7 100%);
     cursor: pointer;
     text-align: center;
 }
@@ -96,10 +96,10 @@ div#close-icon{
 div#close-contact{
     position: absolute;
     bottom: 0;
-    min-height: 3em;
+    min-height: 5em;
     height: 5% !important;
     width: 100%;
-    background: #ced1ce;
+    background-image: radial-gradient(27% 185%, #E1E6EC 0%, #F0F4F7 100%);
     cursor: pointer;
     text-align: center;
 }
@@ -114,6 +114,8 @@ div#idbox{
 }
 
 div#idbox-shadow{
+    margin: 0;
+    padding: 0;
     width: 100%;
     min-height:2em;
     text-align: center;
@@ -129,18 +131,37 @@ div.floaty-shadowy{
 }
 
 div.box-container{
-  margin: 0 1em 0 2em;
+  margin: 1em 1em 0 1em;
   display: inline-block;
-  width: 10%;
-  height: 10%;
-  min-width: 10em;
-  min-height: 5em;
+  min-width: 4em;
+  max-width: 12em;
 }
 
 div.floaty-boxy{
     background: #fff;
     position: relative;
-    padding: 1em;
+    padding: 0.5em 0 0.5em 0em;
+    cursor: pointer;
+    border-radius: 50%;
+    min-height: 4em;
+    min-width: 6em;
+    /* SHADER */
+    background: -moz-linear-gradient(314deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.92) 28%, rgba(255,255,255,0.84) 67%, rgba(192,192,192,0.82) 86%, rgba(255,255,255,0.81) 96%, rgba(255,255,255,0.8) 100%); /* ff3.6+ */
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, rgba(255,255,255,1)), color-stop(28%, rgba(255,255,255,0.92)), color-stop(67%, rgba(255,255,255,0.84)), color-stop(86%, rgba(192,192,192,0.82)), color-stop(96%, rgba(255,255,255,0.81)), color-stop(100%, rgba(255,255,255,0.8))); /* safari4+,chrome */
+    background: -webkit-linear-gradient(314deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.92) 28%, rgba(255,255,255,0.84) 67%, rgba(192,192,192,0.82) 86%, rgba(255,255,255,0.81) 96%, rgba(255,255,255,0.8) 100%); /* safari5.1+,chrome10+ */
+    background: -o-linear-gradient(314deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.92) 28%, rgba(255,255,255,0.84) 67%, rgba(192,192,192,0.82) 86%, rgba(255,255,255,0.81) 96%, rgba(255,255,255,0.8) 100%); /* opera 11.10+ */
+    background: -ms-linear-gradient(314deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.92) 28%, rgba(255,255,255,0.84) 67%, rgba(192,192,192,0.82) 86%, rgba(255,255,255,0.81) 96%, rgba(255,255,255,0.8) 100%); /* ie10+ */
+    background: linear-gradient(136deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.92) 28%, rgba(255,255,255,0.84) 67%, rgba(192,192,192,0.82) 86%, rgba(255,255,255,0.81) 96%, rgba(255,255,255,0.8) 100%); /* w3c */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=0 ); /* ie6-9 */
+
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+
+div.floaty-boxy_backup{
+    background: #fff;
+    position: relative;
+    padding: 0.5em 0 0.5em 0;
     cursor: pointer;
     border-radius: 2em;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
@@ -183,7 +204,12 @@ p.p-bread{
     animation: float-bigsmallr 2s linear infinite;
 }
 
+
 .come-in-once {
+    animation: come-in 0.2s linear;
+}
+
+.come-in-once_backup {
     animation: come-in 0.5s linear;
 }
 
@@ -252,6 +278,27 @@ p.p-bread{
 @keyframes come-in {
     0% {
         opacity: 0;
+        filter: blur(5px);
+      }
+    100%{
+        opacity: 1;
+        filter: none;
+        }
+}
+
+@keyframes leave {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes come-in_backup {
+    0% {
+        opacity: 0;
         top: 4em;
     }
 
@@ -261,7 +308,7 @@ p.p-bread{
     }
 }
 
-@keyframes leave {
+@keyframes leave_backup {
     0% {
         opacity: 1;
         top: 0em;
