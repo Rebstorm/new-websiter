@@ -3,6 +3,7 @@ body {
     background-image: radial-gradient(27% 185%, #E1E6EC 0%, #F0F4F7 100%);
     margin: 0;
     padding: 0;
+    font-size: 1em;
 }
 
 a#icon-attr{
