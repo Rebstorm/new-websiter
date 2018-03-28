@@ -9,6 +9,7 @@ body {
 a#icon-attr{
     color:#ced1ce;
 }
+
 div#contact{
     position: fixed;
     top: 0;
@@ -50,6 +51,7 @@ div.content-page{
   width: 80%;
   text-align: start;
   margin: 0 auto;
+  font-size: 1.3em;
 }
 
 div#content:hover{
